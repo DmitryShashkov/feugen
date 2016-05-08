@@ -1,0 +1,30 @@
+{
+  "name": "ArtistSearch",
+  "authors": [
+    "DmitryShashkov <shashkov.cr@gmail.com>"
+  ],
+  "description": "Artist search project",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "requirejs": "^2.1.22",
+    "angular": "^1.5.0",
+    "jquery": "^2.2.1",
+    "angularAMD": "^0.2.1",
+    "angular-carousel-3d": "*",
+    "angular-bootstrap": "^1.2.4",
+    "angular-animate": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "underscore": "^1.8.3",
+    "angular-ui-mask": "^1.8.1",
+    "angular-route": "^1.5.0",
+    "angular-async-series": "^1.0.0",
+    "angular-ui-notification": "^0.1.0",
+    "moment": "^2.12.0",
+    "dracula": "https://github.com/strathausen/dracula",
+    "angular-ui-tree": "^2.15.0",
+    "angucomplete-alt": "^2.4.1"
+  }
+}

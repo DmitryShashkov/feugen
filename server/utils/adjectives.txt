@@ -1,0 +1,80 @@
+﻿acid  —  кислый 
+ 
+angry  —  сердитый 
+ 
+broken  —  сломанный 
+ 
+chemical  —  химический 
+ 
+clean  —  чистый 
+ 
+complex  —  сложный 
+ 
+conscious  —  сознательный 
+ 
+cut  —  отрезанный 
+ 
+elastic  —  эластичный 
+ 
+fertile  —  плодородный 
+ 
+fixed  —  неподвижный 
+ 
+flat  —  плоский 
+ 
+general  —  общий 
+ 
+good  —  хороший 
+ 
+great  —  великий 
+ 
+hollow  —  полый 
+ 
+important  —  важный 
+ 
+long  —  длинный 
+ 
+material  —  материальный 
+ 
+military  —  военный 
+ 
+natural  —  природный 
+ 
+necessary  —  необходимый 
+ 
+parallel  —  параллельный 
+ 
+political  —  политический 
+ 
+private  —  личный 
+ 
+read  —  прочитанный 
+ 
+regular  —  регулярный 
+ 
+responsible  —  ответственный 
+ 
+second  —  второй 
+ 
+separate  —  отдельный 
+ 
+serious  —  серьезный 
+ 
+sharp  —  острый 
+ 
+sticky  —  липкий 
+ 
+stiff  —  тугой 
+ 
+straight  —  прямой 
+ 
+strong  —  сильный 
+ 
+sudden  —  внезапный 
+ 
+tired  —  уставший 
+ 
+warm  —  теплый 
+ 
+yellow  —  желтый 
+ 

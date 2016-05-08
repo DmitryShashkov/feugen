@@ -1,0 +1,86 @@
+﻿<div>
+    <div class="row">
+        <div class="col-sm-6">
+            <table ui-tree id="tree-root" class="table table-responsive table-custom">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th width="80%">Компоненты правила</th>
+                        <th>
+                            <a class="pull-right btn btn-primary btn-xs" data-nodrag ng-click="newItem()" style="margin-right: 8px;"><span
+                            class="glyphicon glyphicon-plus"></span></a>
+                        </th>		   
+                    </tr>
+                </thead>
+                <tbody ui-tree-nodes ng-model="sequence">
+                    <tr ng-repeat="node in sequence" ui-tree-node>
+                        <td>
+                            <i class="glyphicon glyphicon-resize-vertical" ui-tree-handle></i> 
+                        </td>
+                        <td>
+                            <strong>{{node.title}}</strong> 
+                        </td>
+                        <td>
+                            <a class="pull-right btn btn-danger btn-xs" data-nodrag ng-click="remove(this)">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="text" ng-model="ruleName" placeholder="название правила" class="text-input" />
+            <button ng-click="addRule()" class="button-input">Добавить правило</button>
+            <span class="result">{{addingResult}}</span>
+        </div>
+        <div class="col-sm-6 adding-panel" ng-show="showAddingPanel">
+            <span class="title">Добавить компонент:</span>
+            <div class="btn-group" uib-dropdown>
+                <button id="single-button" class="button-input" uib-dropdown-toggle>
+                {{selectedComponent.title}}
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                    <li role="menuitem" ng-repeat="component in possibleComponents">
+                        <a href="#" ng-click="selectComponent(component)">{{component.title}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div ng-show="selectedComponent.id === 1">
+                <angucomplete-alt id="words"
+                    placeholder="Найти слово..."
+                    text-searching="Поиск..."
+                    text-no-results="Ничего не найдено"
+                    pause="400"
+                    selected-object="selectedWord"
+                    remote-url="/rest/terminals/"
+                    remote-url-data-field="rows"
+                    search-fields="eng_spelling"
+                    title-field="eng_spelling"
+                    input-class="text-input"/>
+            </div>  
+            <div ng-show="selectedComponent.id === 2">
+                <select id="partsOfSpeech" class="text-input">
+                    <option>существительное</option>
+                    <option>прилагательное</option>
+                    <option>глагол</option>
+                    <option>наречие</option>
+                </select>
+            </div>
+            <div ng-show="selectedComponent.id === 3">
+                <select id="prepositions" class="text-input">
+                    <option ng-repeat="preposition in prepositions">{{preposition.title}}</option>
+                </select>
+            </div>
+            <div ng-show="selectedComponent.id === 4">
+                <select id="conjunctions" class="text-input">
+                    <option ng-repeat="conjunction in conjunctions">{{conjunction.title}}</option>
+                </select>
+            </div>
+            <div ng-show="selectedComponent.id === 5">
+                <select id="pronouns" class="text-input">
+                    <option ng-repeat="pronoun in pronouns">{{pronoun.title}}</option>
+                </select>
+            </div>
+            <button class="button-input" ng-click="addComponent()">Добавить</button>
+        </div>
+    </div>
+</div>

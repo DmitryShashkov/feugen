@@ -1,0 +1,63 @@
+<div>
+    <input ng-model="filterQuery" placeholder="поиск..." class="text-input" />
+    <button ng-click="showAddModal()" class="button-input">Добавить</button>
+
+    <table class="table table-bordered table-striped table-hover table-condensed">
+    <thead>
+      <tr>
+        <th>№</th>
+        <th>Написание (рус.)</th>
+        <th>Написание (англ.)</th>
+        <th>Часть речи</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="terminal in pagedTerminals">
+        <td>{{terminal['id']}}</td>
+        <td>{{terminal['rus_spelling']}} - <a href="#" ng-click="read($event, terminal['rus_spelling'], 'ru-RU')"><i class="fa fa-volume-up"></i></a></td>
+        <td>{{terminal['eng_spelling']}} - <a href="#" ng-click="read($event, terminal['eng_spelling'], 'en-US')"><i class="fa fa-volume-up"></i></a></td>
+        <td>{{terminal['part_of_speech']}}</td>
+        <td><a href="#" ng-click="showEditModal($event, terminal['id'])"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+        <td><a href="#" ng-click="showRemoveModal($event, terminal['id'])"><i class="fa fa-trash-o"></i></a></td>
+      </tr>
+    </tbody>
+    </table>
+    <div class="pager">
+    <uib-pagination direction-links="false" total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage" ng-change="pageChanged()"
+        boundary-link-numbers="true" rotate="true" max-size="5"></uib-pagination>
+    </div>
+</div>
+
+<script type="text/ng-template" id="removeModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Подтверждение</h3>
+    </div>
+    <div class="modal-body">
+        Вы действительно хотите удалить терминал "{{terminal['rus_spelling']}}"?
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default" type="button" ng-click="close('ok')">Да</button>
+        <button class="btn btn-default" type="button" ng-click="close('cancel')">Нет</button>
+    </div>
+</script>
+
+<script type="text/ng-template" id="addModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">{{modalTitle}}</h3>
+    </div>
+    <div class="modal-body">
+        <label for="rusSpelling">Написание терминала (рус.):</label>
+        <input type="text" class="form-control" id="rusSpelling" ng-model="rusSpelling">
+        <label for="engSpelling">Написание терминала (англ.):</label>
+        <input type="text" class="form-control" id="engSpelling" ng-model="engSpelling">
+        <label for="partOfSpeech">Часть речи:</label>
+        <select class="form-control" id="partOfSpeech">
+            <option ng-repeat="part in partsOfSpeech">{{part.title}}</option>
+        </select>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default" type="button" ng-click="confirm()">{{modalAction}}</button>
+    </div>
+</script>

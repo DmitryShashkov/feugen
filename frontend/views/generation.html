@@ -1,0 +1,17 @@
+<div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="rule" ng-repeat="rule in rules">
+                <span class="title" ng-click="selectRule(rule)">{{rule.title}}</span>
+                <a href="#" ng-click="removeRule($event, rule)"><i class="fa fa-trash-o"></i></a>
+            </div>
+            <button class="button-input" ng-click="generate()">Сгенерировать: {{selectedRule.title}}</button>
+        </div>
+        <div class="col-md-9">
+            <div ng-show="generatedPhrase" class="phrase">
+                {{generatedPhrase}}
+                <a href="#" ng-click="read($event, generatedPhrase, 'en-US')"><i class="fa fa-volume-up"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

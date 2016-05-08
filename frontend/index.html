@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sally</title>
+    <base href="/">
+
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/angular-ui-tree/dist/angular-ui-tree.min.css">
+    <link rel="stylesheet" href="lib/angucomplete-alt/angucomplete-alt.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet" />
+    
+    <script src="lib/underscore/underscore-min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="lib/angucomplete-alt/dist/angucomplete-alt.min.js"></script>
+    <script type="text/javascript" src="lib/angular-ui-tree/dist/angular-ui-tree.js"></script>
+    
+    <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/services/nodes.js"></script>
+    <script src="js/controllers/terminals.js"></script>
+    <script src="js/controllers/rules.js"></script>
+    <script src="js/controllers/generation.js"></script>
+</head>
+<body ng-app="myApp">
+    <div id="mainContainer" ng-controller="MainCtrl" class="main-container">
+        <uib-tabset>
+            <uib-tab heading="Работа с терминалами" select="changePath('terminals')">
+            </uib-tab>
+            <uib-tab heading="Правила" select="changePath('rules')">
+            </uib-tab>
+            <uib-tab heading="Генерация" select="changePath('generation')">
+            </uib-tab>
+            <!--<uib-tab heading="Проверка" select="changePath('checking')">
+            </uib-tab>-->
+        </uib-tabset>
+        <div ng-view autoscroll="true" class="main-view"></div>
+    </div>
+</body>
+</html>

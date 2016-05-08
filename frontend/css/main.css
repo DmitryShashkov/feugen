@@ -1,0 +1,159 @@
+html {
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EDFFFD;
+    font-family: 'Roboto', sans-serif;
+}
+
+.angucomplete-dropdown {
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.main-container {
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid #009688;
+    background-color: #FFFFFF;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #009688;
+}
+
+.nav-tabs > li > a {
+    color: #009688;
+    border: 1px solid #DDD;
+    border-bottom-color: #009688;
+}
+
+.nav-tabs > li.active > a {
+    border: 1px solid #009688 !important;
+    border-bottom-color: #FFFFFF !important;
+}
+
+.nav > li > a:hover {
+    background-color: #EDFFFD;
+    border-bottom: 1px solid #009688;
+}
+
+.main-view {
+    padding: 15px 5px;
+    border: 1px solid #009688;
+    margin-top: -1px;
+    margin-bottom: 20px;
+}
+
+.text-input {
+    min-width: 200px;
+    height: 30px;
+    border: 1px solid #009688;
+    border-radius: 3px;
+    outline: none;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+.button-input {
+    min-width: 150px;
+    height: 30px;
+    border: 1px solid #009688;
+    border-radius: 3px;
+    outline: none;
+    color: #009688;
+    background-color: #FFFFFF;
+}
+
+.button-input:hover {
+    background-color: #EDFFFD;
+}
+
+.table-bordered th, .table-bordered td {
+    border: 1px solid #009688 !important;
+}
+
+th, label, strong {
+    font-weight: 400;
+}
+
+a .fa {
+    color: #009688;
+}
+
+a .fa:hover {
+    color: #009688;
+}
+
+.pager {
+    text-align: center;
+}
+
+.pager li a {
+    border: 1px solid #009688;
+    color: #009688;
+    border-radius: 0;
+}
+
+.pager li.active > a {
+    border: 1px solid #009688;
+    background-color: #009688 !important;
+}
+
+.pager li a:hover {
+    border: 1px solid #009688;
+}
+
+.table-custom .btn-primary,.table-custom .btn-primary:hover {
+    border: 1px solid #009688;
+    background-color: #009688;
+}
+
+.btn-danger, .btn-danger:hover {
+    border: 1px solid #DDD;
+    background-color: #DDD;
+}
+
+.angular-ui-tree-empty {
+    border: 0;
+    background-color: #EDFFFD;
+    background-image: none;
+}
+
+.adding-panel .button-input {
+    display: block;
+    margin: 10px 0;
+    min-width: 200px;
+}
+
+.adding-panel .title {
+    display: block;
+}
+
+.result {
+    color: #009688;
+    display: block;
+}
+
+.rule {
+    cursor: pointer;
+}
+
+.rule .title {
+    border: 1px solid #009688;
+    border-radius: 3px;
+    height: 20px;
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.phrase {
+    font-size: 24px;
+    text-transform: uppercase;
+}
